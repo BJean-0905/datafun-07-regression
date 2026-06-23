@@ -49,7 +49,7 @@
 2026-06-23 13:18:21 | DEBUG | P07 |   residual min:  -1058.8
 2026-06-23 13:18:21 | DEBUG | P07 |   residual max:  1288.69
 2026-06-23 13:18:21 | DEBUG | P07 |   residual mean: -5.31868e-14
-2026-06-23 13:18:21 | INFO | P07 | 
+2026-06-23 13:18:21 | INFO | P07 |
 CUSTOM: Update these notes and use Markdown cells to narrate what you see.
 
 How to read these (this is YOUR judgment, not the script's):
@@ -84,16 +84,16 @@ the plots together and write down what you conclude.
 2026-06-23 13:18:22 | INFO | P07 | Fitted line:
 2026-06-23 13:18:22 | INFO | P07 |   body_mass_g = 49.6856 * flipper_length_mm + -5780.83
 2026-06-23 13:18:22 | INFO | P07 | ======================
-2026-06-23 13:18:22 | INFO | P07 | Review the fit numbers (R-squared, RMSE). 
-2026-06-23 13:18:22 | INFO | P07 | Look at the fitted-line plot and the residual plot. 
-2026-06-23 13:18:22 | INFO | P07 | Decide if a `straight line` is a fair description. 
+2026-06-23 13:18:22 | INFO | P07 | Review the fit numbers (R-squared, RMSE).
+2026-06-23 13:18:22 | INFO | P07 | Look at the fitted-line plot and the residual plot.
+2026-06-23 13:18:22 | INFO | P07 | Decide if a `straight line` is a fair description.
 2026-06-23 13:18:22 | INFO | P07 | If the residuals DO show a pattern,
-2026-06-23 13:18:22 | INFO | P07 | then a straight line is NOT a good description. 
+2026-06-23 13:18:22 | INFO | P07 | then a straight line is NOT a good description.
 2026-06-23 13:18:22 | INFO | P07 | If the residuals DO NOT show a pattern,
-2026-06-23 13:18:22 | INFO | P07 | then a straight line MIGHT be a good description. 
+2026-06-23 13:18:22 | INFO | P07 | then a straight line MIGHT be a good description.
 2026-06-23 13:18:22 | INFO | P07 | Either way, the findings may be valuable.
 2026-06-23 13:18:22 | INFO | P07 | ======================
-2026-06-23 13:18:22 | INFO | P07 | Repeat with a different feature, or a transformed feature, 
+2026-06-23 13:18:22 | INFO | P07 | Repeat with a different feature, or a transformed feature,
 2026-06-23 13:18:22 | INFO | P07 | to investigate other options.
 2026-06-23 13:18:22 | INFO | P07 | ======================
 2026-06-23 13:18:22 | INFO | P07 | Include instructions and specifics in your README.md file.
@@ -160,7 +160,7 @@ the plots together and write down what you conclude.
 2026-06-23 13:35:41 | DEBUG | P07 |   residual min:  -4622.56
 2026-06-23 13:35:41 | DEBUG | P07 |   residual max:  8584.86
 2026-06-23 13:35:41 | DEBUG | P07 |   residual mean: 5.90581e-14
-2026-06-23 13:35:41 | INFO | P07 | 
+2026-06-23 13:35:41 | INFO | P07 |
 CUSTOM: Update these notes and use Markdown cells to narrate what you see.
 
 How to read these (this is YOUR judgment, not the script's):
@@ -199,16 +199,16 @@ write down what you conclude.
 2026-06-23 13:35:41 | INFO | P07 | Fitted line:
 2026-06-23 13:35:41 | INFO | P07 |   co2 = 3.21582e-10 * gdp + 308.446
 2026-06-23 13:35:41 | INFO | P07 | ======================
-2026-06-23 13:35:41 | INFO | P07 | Review the fit numbers (R-squared, RMSE). 
-2026-06-23 13:35:41 | INFO | P07 | Look at the fitted-line plot and the residual plot. 
-2026-06-23 13:35:41 | INFO | P07 | Decide if a `straight line` is a fair description. 
+2026-06-23 13:35:41 | INFO | P07 | Review the fit numbers (R-squared, RMSE).
+2026-06-23 13:35:41 | INFO | P07 | Look at the fitted-line plot and the residual plot.
+2026-06-23 13:35:41 | INFO | P07 | Decide if a `straight line` is a fair description.
 2026-06-23 13:35:41 | INFO | P07 | If the residuals DO show a pattern (e.g. curve, funnel, clusters),
-2026-06-23 13:35:41 | INFO | P07 | then a straight line is NOT a good description. 
+2026-06-23 13:35:41 | INFO | P07 | then a straight line is NOT a good description.
 2026-06-23 13:35:41 | INFO | P07 | If the residuals DO NOT show a pattern,
-2026-06-23 13:35:41 | INFO | P07 | then a straight line MIGHT be a good description. 
+2026-06-23 13:35:41 | INFO | P07 | then a straight line MIGHT be a good description.
 2026-06-23 13:35:41 | INFO | P07 | Either way, the findings may be valuable.
 2026-06-23 13:35:41 | INFO | P07 | ======================
-2026-06-23 13:35:41 | INFO | P07 | Repeat with a different feature, or a transformed feature, 
+2026-06-23 13:35:41 | INFO | P07 | Repeat with a different feature, or a transformed feature,
 2026-06-23 13:35:41 | INFO | P07 | to investigate other options.
 2026-06-23 13:35:41 | INFO | P07 | ======================
 2026-06-23 13:35:41 | INFO | P07 | Include instructions and specifics in your README.md file.
@@ -223,3 +223,42 @@ write down what you conclude.
 2026-06-23 13:38:18 | INFO | P07 | ========================
 2026-06-23 13:38:18 | INFO | P07 | Executed successfully!
 2026-06-23 13:38:18 | INFO | P07 | ========================
+2026-06-23 13:43:17 | INFO | P07-NB | === RUN START ===
+2026-06-23 13:43:17 | INFO | P07-NB | project=P07-NB
+2026-06-23 13:43:17 | INFO | P07-NB | repo_dir=datafun-07-regression
+2026-06-23 13:43:17 | INFO | P07-NB | python=3.14.3
+2026-06-23 13:43:17 | INFO | P07-NB | os=Windows 11
+2026-06-23 13:43:17 | INFO | P07-NB | shell=powershell
+2026-06-23 13:43:17 | INFO | P07-NB | cwd=notebooks
+2026-06-23 13:43:17 | INFO | P07-NB | github_actions=False
+2026-06-23 13:43:17 | INFO | P07-NB | Loading dataset: owid-co2-data-subset
+2026-06-23 13:45:23 | INFO | P07-NB | === RUN START ===
+2026-06-23 13:45:23 | INFO | P07-NB | project=P07-NB
+2026-06-23 13:45:23 | INFO | P07-NB | repo_dir=datafun-07-regression
+2026-06-23 13:45:23 | INFO | P07-NB | python=3.14.3
+2026-06-23 13:45:23 | INFO | P07-NB | os=Windows 11
+2026-06-23 13:45:23 | INFO | P07-NB | shell=powershell
+2026-06-23 13:45:23 | INFO | P07-NB | cwd=notebooks
+2026-06-23 13:45:23 | INFO | P07-NB | github_actions=False
+2026-06-23 13:45:23 | INFO | P07-NB | Loading dataset: owid-co2-data-subset
+2026-06-23 14:01:03 | INFO | P07-NB | Loading dataset: owid-co2-data-subset
+2026-06-23 14:01:24 | INFO | P07-NB | Loading dataset: owid-co2-data-subset
+2026-06-23 14:03:16 | INFO | P07-NB | Loading dataset: owid-co2-data-subset
+2026-06-23 14:03:28 | INFO | P07-NB | Loading dataset: owid-co2-data-subset
+2026-06-23 14:03:28 | INFO | P07-NB | Loaded: 350 rows, 14 columns
+2026-06-23 14:09:00 | INFO | P07 | === RUN START ===
+2026-06-23 14:09:00 | INFO | P07 | project=P07
+2026-06-23 14:09:00 | INFO | P07 | repo_dir=datafun-07-regression
+2026-06-23 14:09:00 | INFO | P07 | python=3.14.3
+2026-06-23 14:09:00 | INFO | P07 | os=Windows 11
+2026-06-23 14:09:00 | INFO | P07 | shell=powershell
+2026-06-23 14:09:00 | INFO | P07 | cwd=.
+2026-06-23 14:09:00 | INFO | P07 | github_actions=False
+2026-06-23 14:09:00 | INFO | P07 | === RUN START ===
+2026-06-23 14:09:00 | INFO | P07 | project=P07
+2026-06-23 14:09:00 | INFO | P07 | repo_dir=datafun-07-regression
+2026-06-23 14:09:00 | INFO | P07 | python=3.14.3
+2026-06-23 14:09:00 | INFO | P07 | os=Windows 11
+2026-06-23 14:09:00 | INFO | P07 | shell=powershell
+2026-06-23 14:09:00 | INFO | P07 | cwd=.
+2026-06-23 14:09:00 | INFO | P07 | github_actions=False

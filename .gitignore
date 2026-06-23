@@ -15,6 +15,7 @@
 
 PRIVATE-NOTES.md
 PRIVATE_NOTES.md
+data/raw/owid-co2-data.csv
 
 
 # === Environment variables and secrets ===
