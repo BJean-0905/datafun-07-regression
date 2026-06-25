@@ -98,12 +98,9 @@ uvx pre-commit run --all-files
 # repeat if changes were made
 uvx pre-commit run --all-files
 
-# run the penguin example: is there a linear relationship?
-uv run python -m datafun.app_penguins_case
-
 # run the co2 example: is there a linear relationship?
 # the line fits poorly; why?  what would you change?
-uv run python -m datafun.app_co2_case
+uv run python -m datafun.app_co2_bjean
 
 # do chores
 uv run python -m pyright
@@ -186,12 +183,6 @@ In your custom project, discuss these examples, but
 Remove unnecessary instructional comments in your custom files.
 
 Update these figures to present interesting results from your custom project:
-
-## Penguins: Is there a linear relationship?
-
-![Provide a Useful Caption](./docs/images/Figure_1.png)
-
-![Provide a Useful Caption](./docs/images/Figure_2.png)
 
 ## World Data: Is there a linear relationship? How can you improve the analysis?
 

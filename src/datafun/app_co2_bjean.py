@@ -10,7 +10,7 @@ Purpose:
     - reading off the slope and intercept
     - computing fitted values and residuals
     - examining R-squared and RMSE
-    - making a prediction for a chosen feature value
+    - making a prediction for a chosen feature value, explore the raw data
     - charting the data, the fitted line, and the residuals
 
 Data Source:
@@ -46,6 +46,7 @@ from matplotlib.axes import Axes
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from scipy.stats import linregress
 import seaborn as sns
 from sklearn.linear_model import LinearRegression
 
@@ -375,7 +376,20 @@ write down what you conclude.
     return residuals
 
 
-# === Section 8. Create Visualizations ===
+# === Section 8. Fit the log-log regression ===
+# Use the modeling view (df_model) rather than the original df
+# to ensure we're operating on the cleaned data used for modeling.
+
+
+def fit_log_log_regression(df_model: pd.DataFrame):
+    df_model = df_model.copy()
+    df_model["log_gdp"] = np.log(df_model[FEATURE_COL])
+    df_model["log_co2"] = np.log(df_model[TARGET_COL])
+
+    return linregress(df_model["log_gdp"], df_model["log_co2"])
+
+
+# === Section 9. Create Visualizations ===
 
 
 def make_plots(
@@ -460,11 +474,14 @@ def make_plots(
     # plt.show()
 
 
-# === Section 9. Summary and Next Steps ===
+# === Section 10. Summary and Next Steps ===
 
 
 def summarize(
-    df: pd.DataFrame, df_model: pd.DataFrame, model: LinearRegression
+    df: pd.DataFrame,
+    df_model: pd.DataFrame,
+    model: LinearRegression,
+    log_log_model: linregress,
 ) -> None:
     """Log a brief summary of the model and what to examine next.
 
@@ -476,12 +493,22 @@ def summarize(
         df: The original DataFrame.
         df_model: The cleaned modeling view.
         model: The fitted scikit-learn model.
+        log_log_model: The fitted log-log regression result.
 
     Returns:
         None
     """
     slope: float = float(model.coef_[0])
     intercept: float = float(model.intercept_)
+    log_slope: float = float(log_log_model.slope)
+    log_intercept: float = float(log_log_model.intercept)
+
+    LOG.info("=== Summary of Log-Log Regression ===")
+    LOG.info(f"log_slope: {log_slope:.6f}")
+    LOG.info(f"log_intercept: {log_intercept:.6f}")
+    LOG.info(f"log_rvalue: {log_log_model.rvalue:.6f}")
+    LOG.info(f"log_pvalue: {log_log_model.pvalue:.6f}")
+    LOG.info(f"log_stderr: {log_log_model.stderr:.6f}")
 
     LOG.info("========================")
     LOG.info("SUMMARY")
@@ -495,6 +522,10 @@ def summarize(
 
     LOG.info("Fitted line:")
     LOG.info(f"  {TARGET_COL} = {slope:.6g} * {FEATURE_COL} + {intercept:.6g}")
+    LOG.info("Log-log regression (log-transformed variables):")
+    LOG.info(
+        f"  log({TARGET_COL}) = {log_slope:.6g} * log({FEATURE_COL}) + {log_intercept:.6g}"
+    )
 
     LOG.info("======================")
     LOG.info("Review the fit numbers (R-squared, RMSE). ")
@@ -544,11 +575,14 @@ def main() -> None:
     LOG.info("--- Section 7: Examine the fit (residuals, R-squared, RMSE) ---")
     residuals = examine_fit(model, X, y, y_hat)
 
-    LOG.info("--- Section 8: Charts ---")
+    LOG.info("--- Section 8: Fit the log-log regression ---")
+    log_log_model = fit_log_log_regression(df_model)
+
+    LOG.info("--- Section 9: Charts ---")
     make_plots(df_model, y_hat, residuals)
 
-    LOG.info("--- Section 9: Summary and next steps ---")
-    summarize(df, df_model, model)
+    LOG.info("--- Section 10: Summary and next steps ---")
+    summarize(df, df_model, model, log_log_model)
 
     LOG.info(
         "----- in a script, call plt.show() once at the end to display all charts -----"
