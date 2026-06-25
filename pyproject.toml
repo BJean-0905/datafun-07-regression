@@ -10,10 +10,17 @@
 # ============================================================
 
 [project]
-name = "datafun-07-regression" # CUSTOM: Package distribution name (use lowercase and dashes).
+name = "datafun-07-regression"
+description = "Linear Regression Analysis"
 readme = "README.md"
 requires-python = ">=3.14"
 version = "0.1.0"
+
+authors = [
+    { name = "Britany Kline"}
+]
+
+license = { file = "LICENSE" }
 
 dependencies = [
     # REQ.DEPS: External packages used by the project code.
@@ -23,7 +30,8 @@ dependencies = [
     "pandas",    # tabular data manipulation
     "scikit-learn", # machine learning library for regression and more
     "seaborn",   # statistical data visualization built on matplotlib
-    "matplotlib" # plotting library for static, animated, and interactive visualizations in Python
+    "matplotlib", # plotting library for static, animated, and interactive visualizations in Python
+    "scipy",     # scientific computing library for optimization, integration, and more
 ]
 
 [project.optional-dependencies]

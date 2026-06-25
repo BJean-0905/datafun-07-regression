@@ -167,22 +167,20 @@ Press `Ctrl+c` (both keys together) or `Ctrl+Z` then `Enter` on Windows.
 
 ## Findings and Visuals
 
-Take screenshots of your charts and provide them here with a discussion.
-In Markdown, display a figure by using:
-an exclamation mark immediately followed by square brackets containing a useful caption
-immediately followed by parentheses containing the relative path to your figure.
-Note: When you start typing the path with a dot (.) for "here, in this directory",
-the IDE may help complete the path.
+2026-06-25 14:04:35 | INFO | P07 | --- Section 10: Summary and next steps ---
+2026-06-25 14:04:35 | INFO | P07 | === Summary of Log-Log Regression ===
+2026-06-25 14:04:35 | INFO | P07 | log_slope: 1.113933
+2026-06-25 14:04:35 | INFO | P07 | log_intercept: -25.232250
+2026-06-25 14:04:35 | INFO | P07 | log_rvalue: 0.935105
+2026-06-25 14:04:35 | INFO | P07 | log_pvalue: 0.000000
+2026-06-25 14:04:35 | INFO | P07 | log_stderr: 0.024132
+2026-06-25 14:04:35 | INFO | P07 | ========================
 
 In your custom project, discuss these examples, but
 
 - your figures and narrative should reflect your work,
 - this `README.md` should include your commands, process, and visuals, and
 - `docs/index.md` should include your narrative.
-
-Remove unnecessary instructional comments in your custom files.
-
-Update these figures to present interesting results from your custom project:
 
 ## World Data: Is there a linear relationship? How can you improve the analysis?
 
