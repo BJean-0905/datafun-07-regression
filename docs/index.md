@@ -22,3 +22,67 @@ to get these projects running on your machine.
 The API page is not always easy to read at first,
 but it becomes useful as you get more comfortable with project structure,
 modules, functions, and docstrings.
+
+## Custom Project
+
+## Basis
+
+The dataset includes provided data from our world
+data including data points for country, year,
+population, gdp and co2 emissions. The example project
+is based off of the python module, app_co2_case.
+
+## Phase 4 Modification
+
+I chose to open the csv file subset data,
+average the gdp column and change the example
+gdp from 1e+12 to 5.71812e+12, the average,
+to see what happened to the predicted co2.
+This change was fairly easy to operationalize.
+I labeled my commit technical modification.
+I observed a changed in the the predicted co2.
+The original project predicted gdp was 630.03,
+after modification, the predicated gdp was 2147.29.
+I did some additional digging in the subset csv file to
+help unpack the change in predicted co2, while I expected it to change,
+I wanted to know what other variables affected that
+prediction such as how many rows of data were
+included in the original example gdp of 1 vs. how
+many were in included in my modification to a 5 (rounding, of course).
+There are 66 rows included in the original example gdp
+of 1 but there are only 7 included in the modified 5 example.
+This seems relevant as the original predicated gdp of 630
+was higher than all 66 actual co2 data points but the
+modification to a 5 gdp, with only 7 rows of data,
+actually split the difference between the highest 5 returns
+and lowest 2 returns. The highest 5 returns were 3000 something,
+the lowest 2 returns were 1000 something. Initial summary,
+this predication model seems to trend upward bypassing any
+current data points the higher the volume of data points
+it pulls from and inversely tends to split the middle or
+average when there is a lower volume of data points to pull from.
+
+## Phase 5 Custom Project
+
+For the custom project, I added a log-log regression model based off research
+that this may be the logical next step to determine if the initial
+appearance of a linear relationship really existed, as the
+the example project suggested. The log-log regression model code
+uses the scipy library in python and designed
+to capture slope, intercept, rvlaue, pvalue and stderr value.
+The log-log model showed a lower rvalue return; however, shows a higher 1.11
+slope reflective of elasticity in this data. According to this model,
+Co2 emissions increase faster than GDP so instead of having a truly linear
+relationship, as the linear regression model suggested, this log-log
+model suggests the relationship revealed in the linear regression
+model was scale dependent and therfore showed a higher rvalue return.
+
+Researching next steps for analysis was vital to
+understanding how to take the example project to the next
+level to determine if the initial results in the
+linear regression model were valid. Given the results discovered
+in application of the log log model, I would suggest analyzing
+using the log-log model for any additional analysis
+opportunities. A visual using the log log model would
+be very helpful in validating the findings and
+making them presentable.

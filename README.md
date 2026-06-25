@@ -99,6 +99,7 @@ uvx pre-commit run --all-files
 uvx pre-commit run --all-files
 
 # run the co2 example: is there a linear relationship?
+# should that linear relationship be evaluated with more than one model?
 # the line fits poorly; why?  what would you change?
 uv run python -m datafun.app_co2_bjean
 
